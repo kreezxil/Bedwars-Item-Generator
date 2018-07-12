@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bedwarsitemgenerator",
+  "name": "Bedwars Item Generator",
+  "description": "Generate items into your world with blocks like in Bedwars!",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Kreezxil"],
+  "credits": "TheAmazingHaru for the idea!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
