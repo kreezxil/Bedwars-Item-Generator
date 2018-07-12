@@ -1,0 +1,10 @@
+ {
+    "forge_marker": 1,
+    "defaults": {
+        "model": "bedwarsitemgenerator:diamond_gen_normal"
+    },
+    "variants": {
+        "normal": [{}],
+        "inventory": [{}]
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_bottom_top",
+    "textures": {
+            "bottom": "bedwarsitemgenerator:blocks/obsidian_block",
+            "top": "bedwarsitemgenerator:blocks/obsidian_block_top",
+            "side": "bedwarsitemgenerator:blocks/obsidian_block"
+    }
+}

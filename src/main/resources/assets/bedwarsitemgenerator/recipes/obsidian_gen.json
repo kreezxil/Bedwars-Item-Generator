@@ -1,0 +1,14 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": 
+    [
+        {
+            "item": "bedwarsitemgenerator:diamond_gen"
+        }
+    ],
+
+    "result": 
+    {
+        "item": "bedwarsitemgenerator:obsidian_gen"
+    }
+}

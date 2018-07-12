@@ -20,10 +20,10 @@ public class OurConfig {
 		@Config.Name("Gen Speed")
 		public int speed = 1;
 		
-		@Config.Comment({"Quantity of items that are generated"})
-		@Config.Name("Gen Quantity")
-		public int quantity = 1;
-		
+//		@Config.Comment({"Quantity of items that are generated"})
+//		@Config.Name("Gen Quantity")
+//		public int quantity = 1;
+//		
 		@Config.Comment({"Can redstone disable it?"})
 		@Config.Name("Redstone reactive")
 		public boolean redstone = true;
@@ -31,6 +31,10 @@ public class OurConfig {
 		@Config.Comment({"How hard should the block be?"})
 		@Config.Name("Block Hardness")
 		public float hardness = 25f;
+		
+		@Config.Comment({"Can it be harvested?"})
+		@Config.Name("Harvestable?")
+		public boolean canHarvest = true;
 	}
 
 	@SubscribeEvent

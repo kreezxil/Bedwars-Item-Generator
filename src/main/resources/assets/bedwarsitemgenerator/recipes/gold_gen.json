@@ -1,0 +1,14 @@
+{
+    "type": "forge:ore_shapeless",
+    "ingredients": 
+    [
+        {
+            "item": "bedwarsitemgenerator:iron_gen"
+        }
+    ],
+
+    "result": 
+    {
+        "item": "bedwarsitemgenerator:gold_gen"
+    }
+}

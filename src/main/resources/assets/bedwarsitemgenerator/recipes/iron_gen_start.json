@@ -1,0 +1,27 @@
+{
+    "result": 
+    {
+        "item": "bedwarsitemgenerator:iron_gen"
+    },
+
+    "pattern": 
+    [
+        "i",
+        "b"
+    ],
+
+    "type": "forge:ore_shaped",
+    "key": 
+    {
+        "i": 
+        {
+            "item": "minecraft:iron_ingot"
+        },
+
+        "b": 
+        {
+            "item": "minecraft:bed",
+            "data": 0
+        }
+    }
+}
