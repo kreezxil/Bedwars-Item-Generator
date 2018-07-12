@@ -7,6 +7,7 @@
     "pattern": 
     [
         "i",
+        "s",
         "b"
     ],
 
@@ -15,7 +16,12 @@
     {
         "i": 
         {
-            "item": "minecraft:iron_ingot"
+            "item": "minecraft:iron_block"
+        },
+        
+        "s":
+        {
+            "item": "minecraft:nether_star"
         },
 
         "b": 

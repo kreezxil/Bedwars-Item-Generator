@@ -48,11 +48,6 @@ public class GenBlock extends Block implements IHasModel {
 	}
 
 	@Override
-	public boolean getTickRandomly() {
-		return true;
-	}
-
-	@Override
 	public void registerModels() {
 		BedwarsItemGenerator.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 	}
@@ -67,7 +62,14 @@ public class GenBlock extends Block implements IHasModel {
 	 * How many world ticks before ticking
 	 */
 	public int tickRate(World worldIn) {
-		return 20 * OurConfig.genClass.speed;
+		return OurConfig.genClass.speed;
+	}
+
+	
+	@Override
+	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+		super.onBlockAdded(worldIn, pos, state);
+		worldIn.scheduleUpdate(pos, state.getBlock(), tickRate(worldIn));
 	}
 
 	public boolean adjacentPower(World worldIn, BlockPos pos) {
@@ -90,17 +92,17 @@ public class GenBlock extends Block implements IHasModel {
 	@Override
 	public void updateTick(World worldIn, BlockPos pos, IBlockState state, Random rand) {
 		super.updateTick(worldIn, pos, state, rand);
+
 		// Do nothing be returning early if redstone power is on adjacently and the
 		// redstone config is set to true
+		worldIn.scheduleUpdate(pos, state.getBlock(), tickRate(worldIn));
 		if (OurConfig.genClass.redstone && adjacentPower(worldIn, pos)) {
-			System.out.println("redstone check succeeded, exiting");
 			return;
 		}
 
 		Item theThing = this.thing;
 
 		if (this.thing == null) {
-			System.out.println("thing is null, going to pick a random one");
 			Random r = new Random();
 			int s = r.nextInt(3);
 			if (s <= 1)
@@ -111,7 +113,6 @@ public class GenBlock extends Block implements IHasModel {
 				theThing = Items.DIAMOND;
 		}
 
-		System.out.print(theThing.getUnlocalizedName() + " selected for spawning");
 		EntityItem entityItem = new EntityItem(worldIn, (double) pos.getX(), (double) pos.up().getY(),
 				(double) pos.getZ(), new ItemStack(theThing));
 		worldIn.spawnEntity(entityItem);

@@ -16,9 +16,11 @@ public class OurConfig {
 	public static GenClass genClass = new GenClass();
 	
 	public static class GenClass {
-		@Config.Comment({"Speed at which blocks generate items"})
+		@Config.Comment({"Speed at which blocks generate items in ticks",
+			"There are 20 ticks per second.",
+			"A value below 20 can cause immense lag if too many blocks are in the world."})
 		@Config.Name("Gen Speed")
-		public int speed = 1;
+		public int speed = 20;
 		
 //		@Config.Comment({"Quantity of items that are generated"})
 //		@Config.Name("Gen Quantity")
