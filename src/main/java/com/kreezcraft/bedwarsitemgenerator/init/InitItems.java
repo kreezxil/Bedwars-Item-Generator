@@ -1,4 +1,4 @@
-package com.kreezcraft.bedwarsitemgenerator.items;
+package com.kreezcraft.bedwarsitemgenerator.init;
 
 import java.util.ArrayList;
 import java.util.List;

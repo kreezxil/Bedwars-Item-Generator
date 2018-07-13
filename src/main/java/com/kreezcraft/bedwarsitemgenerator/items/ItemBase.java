@@ -2,6 +2,7 @@ package com.kreezcraft.bedwarsitemgenerator.items;
 
 import com.kreezcraft.bedwarsitemgenerator.BedwarsItemGenerator;
 import com.kreezcraft.bedwarsitemgenerator.client.IHasModel;
+import com.kreezcraft.bedwarsitemgenerator.init.InitItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;

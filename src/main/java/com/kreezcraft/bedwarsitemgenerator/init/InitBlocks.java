@@ -1,7 +1,9 @@
-package com.kreezcraft.bedwarsitemgenerator.blocks;
+package com.kreezcraft.bedwarsitemgenerator.init;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.kreezcraft.bedwarsitemgenerator.blocks.GenBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

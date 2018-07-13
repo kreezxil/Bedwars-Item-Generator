@@ -1,8 +1,6 @@
 package com.kreezcraft.bedwarsitemgenerator.init;
 
-import com.kreezcraft.bedwarsitemgenerator.blocks.InitBlocks;
 import com.kreezcraft.bedwarsitemgenerator.client.IHasModel;
-import com.kreezcraft.bedwarsitemgenerator.items.InitItems;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;

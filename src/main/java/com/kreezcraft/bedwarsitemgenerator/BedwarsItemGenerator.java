@@ -6,10 +6,14 @@ import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+
 import org.apache.logging.log4j.Logger;
 
+import com.kreezcraft.bedwarsitemgenerator.init.ModTileEntities;
 import com.kreezcraft.bedwarsitemgenerator.proxy.CommonProxy;
 import com.kreezcraft.bedwarsitemgenerator.recipes.ModRecipes;
+import com.kreezcraft.bedwarsitemgenerator.tile_entities.ticktock;
 
 @Mod(modid = BedwarsItemGenerator.MODID, name = BedwarsItemGenerator.NAME, version = BedwarsItemGenerator.VERSION)
 public class BedwarsItemGenerator {
@@ -33,7 +37,8 @@ public class BedwarsItemGenerator {
 	public void init(FMLInitializationEvent event) {
 		// logger.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
 
-		ModRecipes.init();
+		//ModRecipes.init();
+		ModTileEntities.init();
 	}
 
 	@SidedProxy(serverSide = "com.kreezcraft.bedwarsitemgenerator.proxy.CommonProxy", clientSide = "com.kreezcraft.bedwarsitemgenerator.proxy.ClientProxy")
