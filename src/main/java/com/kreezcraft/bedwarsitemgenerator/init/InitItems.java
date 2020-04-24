@@ -3,7 +3,6 @@ package com.kreezcraft.bedwarsitemgenerator.init;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class InitItems {

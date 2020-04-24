@@ -1,6 +1,5 @@
 package com.kreezcraft.bedwarsitemgenerator;
 
-import net.minecraft.block.Block;
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -14,6 +13,10 @@ public class OurConfig {
 	@Config.Comment({"Generator Settings"})
 	@Config.Name("Generator")
 	public static GenClass genClass = new GenClass();
+	
+	@Config.Comment({"Item Settings"})
+	@Config.Name("Items")
+	public static Items items = new Items();
 	
 	public static class GenClass {
 		@Config.Comment({"Speed at which blocks generate items in ticks",
@@ -37,6 +40,24 @@ public class OurConfig {
 		@Config.Comment({"Can it be harvested?"})
 		@Config.Name("Harvestable?")
 		public boolean canHarvest = true;
+	}
+	
+	public static class Items {
+		@Config.Comment("Item for iron generator to make")
+		@Config.Name("IronItem")
+		public String ironItem = "minecraft:iron_ingot";
+		
+		@Config.Comment("Item for gold generator to make")
+		@Config.Name("GoldItem")
+		public String goldItem = "minecraft:gold_ingot";
+		
+		@Config.Comment("Item for diamond generator to make")
+		@Config.Name("DiamondItem")
+		public String diamondItem = "minecraft:diamond";
+		
+		@Config.Comment("Item for custom generator to make")
+		@Config.Name("CustomItem")
+		public String customItem = "minecraft:apple";
 	}
 
 	@SubscribeEvent

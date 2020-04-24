@@ -1,6 +1,7 @@
 package com.kreezcraft.bedwarsitemgenerator.init;
 
 import com.kreezcraft.bedwarsitemgenerator.client.IHasModel;
+import com.kreezcraft.bedwarsitemgenerator.tile_entities.GenTileEntity;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
@@ -8,6 +9,7 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.event.RegistryEvent.Register;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @EventBusSubscriber
 public class Registrar {
@@ -17,9 +19,11 @@ public class Registrar {
 		event.getRegistry().registerAll(InitItems.ITEMS.toArray(new Item[0]));
 	}
 
+	@SuppressWarnings("deprecation")
 	@SubscribeEvent
 	public static void onBlockRegister(Register<Block> event) {
 		event.getRegistry().registerAll(InitBlocks.BLOCKS.toArray(new Block[0]));
+		GameRegistry.registerTileEntity(GenTileEntity.class, "bedwarsitemgenerator:generator");
 	}
 
 	@SubscribeEvent
