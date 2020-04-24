@@ -22,7 +22,6 @@ public class GenTileEntity extends TileEntity implements ITickable {
 		rand = new Random();
 	}
 	
-	@SuppressWarnings("static-access")
 	@Override
 	public void update() {
 		
